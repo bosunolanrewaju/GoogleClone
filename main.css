@@ -239,11 +239,33 @@ input#search-input:focus {
 	}
 
 	nav#footer-right ul, nav#footer-left ul{
-		display: block;
+		text-align: center;
 	}
 
 	nav#footer-right ul li, nav#footer-left ul li{
-		padding-top: 2px;
-		padding-bottom: 2px;
+		padding: 5px 0px;
 	}
+
+}
+
+
+@media screen and (max-width: 360px){
+	.footer-nav{
+		background: none;
+		border: none;
+	}
+
+	nav a, nav#footer-right a, nav#footer-left a {
+		padding-left: 4px;
+		padding-right: 4px;
+	}
+
+	nav#footer-right ul li:last-child {
+		display: none;
+	}
+
+	nav#footer-left ul li:nth-child(2) {
+		display: none;
+	}
+
 }
