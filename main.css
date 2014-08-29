@@ -1,0 +1,271 @@
+/***********************************
+	GENERAL STRUCTURE
+************************************/
+
+html, body{
+	height: 100%;
+}
+
+body{
+	font-family: Arial, Tahoma, sans-serif;
+	font-size: 0.8em;
+}
+
+#wrapper{
+	min-height: 100%;
+}
+
+section{
+	padding-bottom: 42px;
+}
+
+.main {
+	max-width: 700px;
+	margin: 100px auto;
+	text-align: center;
+	display: block;
+}
+
+footer{
+	margin-top: -42px;
+	height: 42px;
+}
+
+
+
+
+/***********************************
+	CLEARFIX
+************************************/
+.group:before, 
+.group:after {
+	content: "";
+	display: table;
+}
+
+.group:after{
+	clear: both;
+}
+
+
+
+
+
+/***********************************
+	NAVIGATION
+************************************/
+/*Top*/
+nav#header-right ul, nav#footer-right{
+	list-style: none;
+	float: right;
+	margin-right: 25px;
+	margin-bottom: 0;
+}
+
+nav ul li{
+	float: left;
+	padding: 5% 0;
+}
+
+#header-right ul li:last-child, #header-right ul li:last-child a {
+	padding: 0;
+	cursor: default;
+}
+
+#header-right ul li:last-child {
+	padding: 0;
+}
+
+nav a {
+	padding: 4px 10px;
+	margin: 6px 0;
+	display: block;
+}
+
+/*Footer*/
+.footer-nav{
+	bottom: 0;
+	background: linear-gradient(to bottom, rgb(245,245,245), rgb(240,240,240));
+	width: 100%;
+	border-top: 1px solid rgb(230,230,230);
+}
+
+nav#footer-left{
+	list-style: none;
+	float: left;
+	margin-left: 25px;
+	margin-bottom: 0;
+}
+
+nav#footer-right ul li, nav#footer-left ul li{
+	padding: 14px 0;
+}
+
+nav#footer-right a, nav#footer-left a {
+	padding: 0 15px;
+	display: block;
+	color: rgb(100,100,100);
+	margin: 0;
+}
+
+
+
+
+
+
+/***********************************
+	LINKS
+************************************/
+a, a:link, a:visited {
+	text-decoration: none;
+	color: #333;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/*footer links*/
+
+
+
+/***********************************
+	IMAGES
+************************************/
+.main img {
+	max-width: 269px;
+	display: block;
+	margin: 135px auto 0;
+}
+
+.grid {
+	width: 25px;
+	height: 25px;
+	margin-top: 3;
+	margin-left: 7;
+	padding: none;
+	background: url("grid.jpg") no-repeat 3px 5px / 17px 17px;
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+	cursor: default;
+}
+
+.grid:hover {
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+
+/***********************************
+	FORMS
+************************************/
+input#search-input {
+	width: 81%;
+	display: block;
+	margin: 20px auto 10px;
+	padding: 6px 9px;
+	border: 1px solid #CCC;
+	background: url("mic.gif") no-repeat 99% center / 15px 20px;
+	opacity: 0.7;
+    filter: alpha(opacity=70); /* For IE8 and earlier */
+}
+
+input#search-input:hover {
+	
+	border: 1px solid #999;
+}
+
+input#search-input:focus {
+	
+	border: 1px solid #66F;
+	outline: none;
+}
+
+#search-btn, #lucky-btn, .btn {
+	font-weight: bold;
+	font-size: 0.83em;
+	color: #444;
+	padding: 6px 8px;
+	border-radius: 2px;
+	background: linear-gradient(to bottom, rgb(245,245,245), rgb(240,240,240));
+	margin: 7px;
+	border: 1px solid rgb(215,215,215);
+}
+
+
+#search-btn:hover, #lucky-btn:hover,.btn:hover {
+	box-shadow: 0 1px 1px 0 #CCC;
+	color: #333;
+	background: linear-gradient(to bottom, rgb(245,245,245), rgb(240,240,240));
+}
+
+
+#search-btn:focus, #lucky-btn:focus {
+	outline: none;
+}
+
+.btn {
+	color: white;
+	background: linear-gradient(to bottom, rgb(67,135,253), rgb(70,131,234));
+	border: 1px solid rgb(110,120,255);
+	padding: 6px 13px;
+	font-size: 1em;
+	margin: 10px 10px 10px 0;
+	outline: none;
+}
+
+
+.btn:hover {
+	background: linear-gradient(to bottom, rgb(67,135,253), rgb(70,131,234));
+	color: white;
+}
+
+.btn:active {
+	background: linear-gradient(to bottom, rgb(40,108,226), rgb(43,106,207));
+	box-shadow: inset 0px 1px 1px rgb(100,100,100);
+	
+}
+
+
+
+
+/***********************************
+	MEDIA QUERIES
+************************************/
+@media screen and (max-width: 660px){
+	nav#footer-right, nav#footer-left {
+		float: none;
+		margin: 0 auto;
+	}
+
+	nav#footer-right ul, nav#footer-left ul{
+		text-align: center;
+	}
+
+	nav#footer-right ul li, nav#footer-left ul li{
+		padding: 5px 0px;
+	}
+
+}
+
+
+@media screen and (max-width: 360px){
+	.footer-nav{
+		background: none;
+		border: none;
+	}
+
+	nav a, nav#footer-right a, nav#footer-left a {
+		padding-left: 4px;
+		padding-right: 4px;
+	}
+
+	nav#footer-right ul li:last-child {
+		display: none;
+	}
+
+	nav#footer-left ul li:nth-child(2) {
+		display: none;
+	}
+
+}
